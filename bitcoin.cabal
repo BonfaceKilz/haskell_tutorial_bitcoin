@@ -4,15 +4,15 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ac1de607f9d3ffc90e715934c36316b20563bd100cf331a3b9c36228645c9a59
+-- hash: 36cd4ece53c72ebccbd563104448d6d3de5f0a83719200deb2506c2ea62a56c6
 
 name:           bitcoin
 version:        0.1.0.0
 category:       Web
-homepage:       https://github.com/githubuser/bitcoin#readme
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2019 Author name here
+homepage:       https://github.com/bonfacekilz/bitcoin_tutorial#readme
+author:         Bonface M. K.
+maintainer:     bonfacemunyoki@gmail.com
+copyright:      2019 Bonface K. M.
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -27,4 +27,8 @@ executable bitcoin
       src
   build-depends:
       base >=4.7 && <5
+    , http-conduit
+    , lens
+    , lens-aeson
+    , text
   default-language: Haskell2010
