@@ -3,6 +3,7 @@
 module Main where
 
 import qualified Data.ByteString.Char8 as BS
+import qualified Data.Text.IO          as TIO
 
 import           Network.HTTP.Simple (httpBS, getResponseBody)
 import           Control.Lens        (preview)
@@ -21,4 +22,6 @@ getRate = preview (key "bpi" . key "USD" . key "rate" . _String)
 main :: IO ()
 main = do
   json <- fetchJSON
-  print (getRate json)
+  case getRate json of
+    Nothing -> TIO.putStrLn "Could not find the bit coin rate :("
+    Just rate -> TIO.putStrLn $ "The current Bitcoin rate is " <> rate <> "$"
