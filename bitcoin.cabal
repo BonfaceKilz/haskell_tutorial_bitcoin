@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 36cd4ece53c72ebccbd563104448d6d3de5f0a83719200deb2506c2ea62a56c6
+-- hash: 9c7c9e9884dbb40f6fdbc0fa24ae90fc4b1fc07decd0b11cdf775d978a654b69
 
 name:           bitcoin
 version:        0.1.0.0
@@ -27,6 +27,7 @@ executable bitcoin
       src
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , http-conduit
     , lens
     , lens-aeson
